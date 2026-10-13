@@ -1,0 +1,1 @@
+let e=require("electron");e.contextBridge.exposeInMainWorld(`electronAPI`,{openFileDialog:()=>e.ipcRenderer.invoke(`file:open-dialog`)});

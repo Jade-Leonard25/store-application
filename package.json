@@ -1,0 +1,41 @@
+{
+  "name": "csv-reader",
+  "productName": "Spreadsheet Grapher",
+  "description": "Open CSV and Excel files and turn them into charts",
+  "author": "Your Name <you@example.com>",
+  "homepage": "https://example.com",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist-electron/main.js",
+  "scripts": {
+      "dev": "vite",                          
+  "dev:manual": "concurrently -k -n vite,electron -c cyan,magenta \"vite\" \"wait-on tcp:5173 && electron .\"",
+    "build": "tsc --noEmit && vite build",
+    "start": "node scripts/start.js",
+    "package": "npm run build && electron-builder",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/papaparse": "^5.5.2",
+    "chart.js": "^4.5.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "concurrently": "^10.0.5",
+    "exceljs": "^4.4.0",
+    "navigo": "^8.11.1",
+    "papaparse": "^5.7.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3",
+    "wait-on": "^9.5.1"
+  },
+  "dependencies": {
+    "electron": "^44.7.0",
+    "vite-plugin-electron": "^1.1.2"
+  }
+}
